@@ -92,7 +92,7 @@
         </style>
 
     </head>
-    <body>
+    <body id="elem">
         <div class="app">
 
             <div id="image-holder">
@@ -123,5 +123,29 @@
             </div>
 
         </div>
+
+        <script src="js/touch.js"></script>
+
+    <script>
+
+        /*document.body.addEventListener('touchmove', function(e){
+
+            e.preventDefault();
+
+        });*/
+
+        var hammertime = new Hammer(document.getElementById("elem"));
+        hammertime.on('pan', function(ev) {
+            console.log(ev);
+        });
+
+        hammertime.on('swipeleft', function(ev) {
+            alert("Test");
+        });
+
+
+
+    </script>
+
     </body>
 </html>
