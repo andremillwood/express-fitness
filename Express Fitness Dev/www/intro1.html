@@ -20,142 +20,149 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
-
-        <!-- Include the jQuery library -->
-        <script src="js/jquery.js"></script>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
 
 
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
-        <title>Express Fitness</title>
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-        <style>
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-            body {
+    <title>Express Fitness</title>
 
-                background-color:#d91e37 !important;
-                padding: 0;
-                margin:0;
-                max-height: 100vh;
+    <style>
 
-            }
+        body {
 
-            .app {
+            background-color:#d91e37 !important;
+            padding: 0;
+            margin:0;
+            max-height: 100vh;
 
-                max-height: 100vh;
+        }
 
-            }
+        .app {
 
-            #image-holder {
+            max-height: 100vh;
 
+        }
 
-                width:100vw;
-                height:60vh;
-                background-color: white;
-                padding: 0;
-                margin:0;
-
-            }
-
-            #text-holder {
-
-                position:absolute;
-                top:60vh;
-                width:100vw;
-                height:40vh;
-                max-height:40vh;
-                padding: 0;
-                margin:0;
-
-            }
-
-            @font-face {
-                font-family: BebasNeue;
-                src: url(fonts/BebasNeue.otf);
-            }
-
-            .dot {
-
-                width:3vw;
-                margin-right:5vw;
-
-            }
-
-            #dots {
-
-                position:relative;
-                left:34vw;
-                padding-bottom:5vh;
-
-            }
-
-        </style>
-
-    </head>
-    <body id="elem">
-        <div class="app">
-
-            <div id="image-holder">
-
-                <a id="nextpage" href="intro2.html" data-transition="slide">---</a>
+        #image-holder {
 
 
-            </div>
+            width:100vw;
+            height:60vh;
+            background-color: white;
+            padding: 0;
+            margin:0;
 
-            <div id="text-holder">
+        }
 
-                <p style="font-family:BebasNeue;color:white;font-size:21pt;padding:10vw;margin:0;text-align: center;">
+        #text-holder {
 
-                    SIGN UP ON THE APP IS FREE! JOIN THE EXPRESS FITNESS NATION AND ENJOY TO TRACK YOUR FITNESS.
+            position:absolute;
+            top:60vh;
+            width:100vw;
+            height:40vh;
+            max-height:40vh;
+            padding: 0;
+            margin:0;
+            background-color:#d91e37 !important;
 
-                </p>
+        }
 
-                <div id="dots">
+        @font-face {
+            font-family: BebasNeue;
+            src: url(fonts/BebasNeue.otf);
+        }
 
-                    <img class="dot" src="img/greydot.png"/>
+        .dot {
 
-                    <img class="dot" src="img/whitedot.png"/>
+            width:3vw;
+            margin-right:5vw;
 
-                    <img class="dot" src="img/whitedot.png"/>
+        }
 
-                    <img class="dot" src="img/whitedot.png"/>
+        #dots {
 
-                </div>
+            position:relative;
+            left:34vw;
+            padding-bottom:5vh;
 
-            </div>
+        }
+
+        a {
+
+            color:white !important;
+
+        }
+
+    </style>
+
+</head>
+<body id="elem">
+<div class="app" data-role="page">
+
+    <div id="image-holder">
+
+        <a id="nextpage" href="intro2.html" data-transition="slide">---</a>
+
+
+    </div>
+
+    <div id="text-holder">
+
+        <p style="font-family:BebasNeue;color:white;font-size:21pt;padding:10vw;margin:0;text-align: center;">
+
+            SIGN UP ON THE APP IS FREE! JOIN THE EXPRESS FITNESS NATION AND ENJOY TO TRACK YOUR FITNESS.
+
+        </p>
+
+        <div id="dots">
+
+            <img class="dot" src="img/greydot.png"/>
+
+            <img class="dot" src="img/whitedot.png"/>
+
+            <img class="dot" src="img/whitedot.png"/>
+
+            <img class="dot" src="img/whitedot.png"/>
 
         </div>
 
-        <script src="js/touch.js"></script>
+    </div>
 
-    <script>
+</div>
 
-        /*document.body.addEventListener('touchmove', function(e){
+<script src="js/touch.js"></script>
 
-            e.preventDefault();
+<script>
 
-        });*/
+    /*document.body.addEventListener('touchmove', function(e){
 
-        $( document ).ready(function() {
+     e.preventDefault();
 
-        var hammertime = new Hammer(document.getElementById("elem"));
-        hammertime.on('pan', function(ev) {
-            console.log(ev);
-        });
+     });*/
 
-        hammertime.on('swipeleft', function(ev) {
+    $( document ).ready(function() {
+
+        $("#elem").on('swipe', function(ev) {
             document.getElementById("nextpage").click();
         });
 
-        });
+    });
 
-    </script>
+</script>
 
-    </body>
+</body>
 </html>

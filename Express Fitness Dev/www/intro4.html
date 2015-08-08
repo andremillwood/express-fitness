@@ -66,6 +66,7 @@
                 max-height:40vh;
                 padding: 0;
                 margin:0;
+                background-color:#d91e37 !important;
 
             }
 
@@ -86,6 +87,12 @@
                 position:relative;
                 left:34vw;
                 padding-bottom:5vh;
+
+            }
+
+            a {
+
+                color:white !important;
 
             }
 
@@ -139,7 +146,7 @@
             console.log(ev);
         });
 
-        hammertime.on('swipeleft', function(ev) {
+        hammertime.on('swipe', function(ev) {
             alert("Test");
         });
 
