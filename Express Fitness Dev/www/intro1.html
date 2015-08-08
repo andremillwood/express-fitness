@@ -31,15 +31,61 @@
 
         <style>
 
-            #expresslogo {
+            body {
+
+                background-color:#d91e37;
+                padding: 0;
+                margin:0;
+                max-height: 100vh;
+
+            }
+
+            .app {
+
+                max-height: 100vh;
+
+            }
+
+            #image-holder {
+
+
+                width:100vw;
+                height:60vh;
+                background-color: white;
+                padding: 0;
+                margin:0;
+
+            }
+
+            #text-holder {
 
                 position:absolute;
-                margin: auto;
-                top:0;
-                left:0;
-                bottom:0;
-                right:0;
-                width:60%;
+                top:60vh;
+                width:100vw;
+                height:40vh;
+                max-height:40vh;
+                padding: 0;
+                margin:0;
+
+            }
+
+            @font-face {
+                font-family: BebasNeue;
+                src: url(fonts/BebasNeue.otf);
+            }
+
+            .dot {
+
+                width:3vw;
+                margin-right:5vw;
+
+            }
+
+            #dots {
+
+                position:relative;
+                left:34vw;
+                padding-bottom:5vh;
 
             }
 
@@ -48,7 +94,34 @@
     </head>
     <body>
         <div class="app">
-            <img id="expresslogo" src="img/expresslogo.png"/>
+
+            <div id="image-holder">
+
+
+            </div>
+
+            <div id="text-holder">
+
+                <p style="font-family:BebasNeue;color:white;font-size:21pt;padding:10vw;margin:0;text-align: center;">
+
+                    SIGN UP ON THE APP IS FREE! JOIN THE EXPRESS FITNESS NATION AND ENJOY TO TRACK YOUR FITNESS.
+
+                </p>
+
+                <div id="dots">
+
+                    <img class="dot" src="img/greydot.png"/>
+
+                    <img class="dot" src="img/whitedot.png"/>
+
+                    <img class="dot" src="img/whitedot.png"/>
+
+                    <img class="dot" src="img/whitedot.png"/>
+
+                </div>
+
+            </div>
+
         </div>
     </body>
 </html>
