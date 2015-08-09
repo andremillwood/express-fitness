@@ -42,6 +42,12 @@
 
     <style>
 
+        html {
+
+            background-color: black;
+
+        }
+
         body {
 
             background-color:#d91e37 !important;
@@ -54,6 +60,7 @@
         .app {
 
             max-height: 100vh;
+            background-color: black;
 
         }
 
@@ -62,7 +69,7 @@
 
             width:100vw;
             height:60vh;
-            background-color: white;
+            background-color: black;
             padding: 0;
             margin:0;
 
@@ -103,7 +110,9 @@
 
         a {
 
-            color:white !important;
+            color:black !important;
+            text-decoration: none;
+            text-shadow: none;
 
         }
 
@@ -124,7 +133,7 @@
 
     <div id="text-holder">
 
-        <p style="font-family:BebasNeue;color:white;font-size:21pt;padding:10vw;margin:0;text-align: center;">
+        <p style="font-family:BebasNeue;color:white;font-size:18pt;padding:10vw;margin:0;text-align: center;">
 
             SIGN UP ON THE APP IS FREE! JOIN THE EXPRESS FITNESS NATION AND ENJOY TO TRACK YOUR FITNESS.
 
@@ -162,7 +171,7 @@
 
         <div id="text-holder">
 
-            <p style="font-family:BebasNeue;color:white;font-size:21pt;padding:10vw;margin:0;text-align: center;">
+            <p style="font-family:BebasNeue;color:white;font-size:18pt;padding:10vw;margin:0;text-align: center;">
 
                 WE WILL JOIN YOU ON YOUR JOURNEY PROVIDING YOU WITH THE RIGHT TOOLS.
 
@@ -200,9 +209,9 @@
 
         <div id="text-holder" style="background-color:#d91e37;">
 
-            <p style="font-family:BebasNeue;color:white;font-size:21pt;padding:10vw;margin:0;text-align: center;">
+            <p style="font-family:BebasNeue;color:white;font-size:18pt;padding:10vw;margin:0;text-align: center;">
 
-                ANALYZE YOUR STATS. WE WILL GIVE YOU ALL THE INFO YOU NEED TO TRACK YOUR PROGRESS IN THE GYM.
+                ANALYZE YOUR STATS. WE GIVE YOU ALL THE INFO YOU NEED TO TRACK YOUR PROGRESS IN THE GYM.
 
             </p>
 
@@ -237,7 +246,7 @@
 
         <div id="text-holder">
 
-            <p style="font-family:BebasNeue;color:white;font-size:21pt;padding:10vw;margin:0;text-align: center;">
+            <p style="font-family:BebasNeue;color:white;font-size:18pt;padding:10vw;margin:0;text-align: center;">
 
                 DESIGN WORKOUTS JUST FOR YOU TO HELP IMPROVE YOUR PERFORMANCE.
 
@@ -281,16 +290,28 @@
 
     $( document ).ready(function() {
 
-        $("#intro1").on('swipe', function(ev) {
+        $("#intro1").on('swipeleft', function(ev) {
             document.getElementById("get2").click();
         });
 
-        $("#intro2").on('swipe', function(ev) {
+        $("#intro2").on('swipeleft', function(ev) {
             document.getElementById("get3").click();
         });
 
-        $("#intro3").on('swipe', function(ev) {
+        $("#intro2").on('swiperight', function(ev) {
+            history.back();
+        });
+
+        $("#intro3").on('swipeleft', function(ev) {
             document.getElementById("get4").click();
+        });
+
+        $("#intro3").on('swiperight', function(ev) {
+            history.back();
+        });
+
+        $("#intro4").on('swiperight', function(ev) {
+            history.back();
         });
 
     });
