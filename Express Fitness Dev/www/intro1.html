@@ -110,12 +110,14 @@
     </style>
 
 </head>
-<body id="elem">
-<div class="app" data-role="page">
+<body>
+<div class="app">
+
+    <div data-role="page" id="intro1">
 
     <div id="image-holder">
 
-        <a id="nextpage" href="intro2.html" data-transition="slide">---</a>
+        <a id="get2" href="#intro2" data-transition="slide">---</a>
 
 
     </div>
@@ -142,6 +144,129 @@
 
     </div>
 
+    </div><!--end of page div-->
+
+
+
+
+
+    <div data-role="page" id="intro2">
+
+
+        <div id="image-holder">
+
+
+            <a id="get3" href="#intro3" data-transition="slide">---</a>
+
+        </div>
+
+        <div id="text-holder">
+
+            <p style="font-family:BebasNeue;color:white;font-size:21pt;padding:10vw;margin:0;text-align: center;">
+
+                WE WILL JOIN YOU ON YOUR JOURNEY PROVIDING YOU WITH THE RIGHT TOOLS.
+
+            </p>
+
+            <div id="dots">
+
+                <img class="dot" src="img/whitedot.png"/>
+
+                <img class="dot" src="img/greydot.png"/>
+
+                <img class="dot" src="img/whitedot.png"/>
+
+                <img class="dot" src="img/whitedot.png"/>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div data-role="page" id="intro3">
+
+
+        <div id="image-holder">
+
+            <a id="get4" href="#intro4" data-transition="slide">---</a>
+
+
+        </div>
+
+        <div id="text-holder" style="background-color:#d91e37;">
+
+            <p style="font-family:BebasNeue;color:white;font-size:21pt;padding:10vw;margin:0;text-align: center;">
+
+                ANALYZE YOUR STATS. WE WILL GIVE YOU ALL THE INFO YOU NEED TO TRACK YOUR PROGRESS IN THE GYM.
+
+            </p>
+
+            <div id="dots">
+
+                <img class="dot" src="img/whitedot.png"/>
+
+                <img class="dot" src="img/whitedot.png"/>
+
+                <img class="dot" src="img/greydot.png"/>
+
+                <img class="dot" src="img/whitedot.png"/>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div data-role="page" id="intro4">
+
+
+
+
+        <div id="image-holder">
+
+
+        </div>
+
+        <div id="text-holder">
+
+            <p style="font-family:BebasNeue;color:white;font-size:21pt;padding:10vw;margin:0;text-align: center;">
+
+                DESIGN WORKOUTS JUST FOR YOU TO HELP IMPROVE YOUR PERFORMANCE.
+
+            </p>
+
+            <div id="dots">
+
+                <img class="dot" src="img/whitedot.png"/>
+
+                <img class="dot" src="img/whitedot.png"/>
+
+                <img class="dot" src="img/whitedot.png"/>
+
+                <img class="dot" src="img/greydot.png"/>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
 </div>
 
 <script src="js/touch.js"></script>
@@ -156,8 +281,16 @@
 
     $( document ).ready(function() {
 
-        $("#elem").on('swipe', function(ev) {
-            document.getElementById("nextpage").click();
+        $("#intro1").on('swipe', function(ev) {
+            document.getElementById("get2").click();
+        });
+
+        $("#intro2").on('swipe', function(ev) {
+            document.getElementById("get3").click();
+        });
+
+        $("#intro3").on('swipe', function(ev) {
+            document.getElementById("get4").click();
         });
 
     });
