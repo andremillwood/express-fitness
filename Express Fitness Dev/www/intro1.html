@@ -237,7 +237,7 @@
     <div data-role="page" id="intro4">
 
 
-
+        <a id="getsignupform" href="signup.html" data-transition="slide">---</a>
 
         <div id="image-holder" style="background-image: url('img/4.jpg');background-size: cover;">
 
@@ -313,6 +313,11 @@
         $("#intro4").on('swiperight', function(ev) {
             history.back();
         });
+
+        $("#intro4").on('swipeleft', function(ev) {
+            document.getElementById("getsignupform").click();
+        });
+
 
     });
 
